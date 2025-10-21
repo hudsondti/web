@@ -118,5 +118,129 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-color:  #26006b;
   }
+}
+
+
+.container-section {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.container-section {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1280px) {
+  .container-section {
+    width: 1200px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container-section {
+    width: 1300px;
+  }
+}.container-section {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.container-section {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1280px) {
+  .container-section {
+    width: 1200px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container-section {
+    width: 1300px;
+  }
+}
+
+.container-section {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.container-section-no-mobile {
+  width: 100%;
+  margin: 0;
+}
+@media screen and (min-width: 768px) {
+  .container-section-no-mobile {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container-section,
+  .container-section-no-mobile {
+    width: 1200px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container-section,
+  .container-section-no-mobile {
+    width: 1300px;
+  }
+}
+
+/* Font Tokens */
+.text-mobile {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.text-desktop {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media screen and (min-width: 1024px) {
+  .text-responsive {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+/* Mobile first approach */
+@media screen and (max-width: 1023px) {
+  .text-responsive {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+/* Title Token for Mobile */
+.title-mobile {
+  font-weight: 600;
+  font-style: normal;
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 30px;
+}
+
+/* Glass Effect for Header */
+.glass-effect {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }

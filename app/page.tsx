@@ -1,11 +1,14 @@
 import BannerHero from "@/src/components/BannerHero/BannerHero";
+import ServicesApp from "@/src/components/ServicesApp/ServicesApp";
+import Footer from "@/src/components/Footer/Footer";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <section>
+    <section className="pt-[88px]">
       <BannerHero />
-      <h1>Welcome to the Home Page</h1>
+      <ServicesApp />
+      <Footer />
     </section>
   );
 }
