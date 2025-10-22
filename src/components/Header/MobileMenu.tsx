@@ -1,8 +1,6 @@
 import { Link, User } from "lucide-react";
 import { useState } from "react";
 
-interface MobileMenuProps {}
-
 export default function MobileMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
