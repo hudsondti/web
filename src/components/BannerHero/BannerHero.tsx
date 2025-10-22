@@ -25,7 +25,7 @@ export default function BannerHero() {
 
           <Link
             href="/agendamento"
-            className="text-white uppercase bg-indigo-950 rounded-3xl px-6 py-3 self-center w-fit"
+            className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg transition duration-300 text-sm font-medium self-center w-fit"
           >
             Comece agora
           </Link>

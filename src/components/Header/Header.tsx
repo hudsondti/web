@@ -4,6 +4,7 @@ import { User, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import DesktopMenu from "./DesktopMenu";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,41 +42,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:block">
-          <ul className="flex items-center gap-8 text-white">
-            <li>
-              <Link
-                href="/agenda"
-                className="text-responsive hover:text-gray-300 transition duration-300"
-              >
-                Agenda
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/calendario"
-                className="text-responsive hover:text-gray-300 transition duration-300"
-              >
-                Calendario
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/financas"
-                className="text-responsive hover:text-gray-300 transition duration-300"
-              >
-                Finanças
-              </Link>
-            </li>
-            <Link
-              className="flex items-center gap-3 rounded bg-indigo-800 py-2 px-4 hover:opacity-80 transition duration-300 text-responsive"
-              href="/login"
-            >
-              <User className="text-white w-6 h-6" />
-              Login
-            </Link>
-          </ul>
-        </nav>
+        <DesktopMenu />
 
         {/* Mobile Menu Button */}
         <button
