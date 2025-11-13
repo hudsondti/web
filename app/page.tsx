@@ -7,7 +7,6 @@ export default function Home() {
     <section className="pt-[88px]">
       <BannerHero />
       <ServicesApp />
-      <Footer />
     </section>
   );
 }
