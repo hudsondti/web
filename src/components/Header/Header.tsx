@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import DesktopMenu from "./DesktopMenu";
+import { pagesMenu } from "./pagesmenu";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,7 +42,6 @@ export default function Header() {
           />
         </Link>
 
-        {/* Desktop Navigation */}
         <DesktopMenu />
 
         {/* Mobile Menu Button */}
@@ -58,33 +58,18 @@ export default function Header() {
           <div className="absolute top-full left-0 w-full bg-[#26006b] shadow-lg bg-opacity-95 md:hidden">
             <nav className="container-section px-4 py-6">
               <ul className="flex flex-col gap-6 text-white">
-                <li>
-                  <Link
-                    href="/agenda"
-                    className="block text-responsive hover:text-gray-300 transition duration-300"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Agenda
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/calendario"
-                    className="block text-responsive hover:text-gray-300 transition duration-300"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Calendario
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/financas"
-                    className="block text-responsive hover:text-gray-300 transition duration-300"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Finanças
-                  </Link>
-                </li>
+                {pagesMenu.map((page) => (
+                  <li key={page.href}>
+                    <Link
+                      href={page.href}
+                      className="block text-responsive hover:text-gray-300 transition duration-300"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {page.name}
+                    </Link>
+                  </li>
+                ))}
+
                 <li className="flex justify-center">
                   <Link
                     className="flex items-center gap-3 rounded bg-indigo-800 py-2 px-4 hover:opacity-80 transition duration-300 w-fit text-responsive"
